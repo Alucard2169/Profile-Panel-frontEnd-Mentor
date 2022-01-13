@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Kumbh sans', sans-serif;
+}
+
+body {
+  background: #19a2ae;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.extra {
+  position: absolute;
+}
+
+.extra .top {
+  -webkit-transform: translateX(-40%);
+          transform: translateX(-40%);
+}
+
+.extra .lower {
+  -webkit-transform: translateX(40%);
+          transform: translateX(40%);
+}
+
+.container {
+  -webkit-box-shadow: 0 0 20px #454343;
+          box-shadow: 0 0 20px #454343;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+  width: 90%;
+  background: white;
+  overflow: hidden;
+}
+
+.container header {
+  width: 100%;
+}
+
+.container header .header-image {
+  width: 100%;
+}
+
+.container main {
+  text-align: center;
+}
+
+.container main .profile_picture {
+  border-radius: 50%;
+  width: 65%;
+  outline: 8px white solid;
+  margin-top: -4rem;
+}
+
+.container main .bio {
+  margin-top: 2rem;
+}
+
+.container main .bio .name {
+  color: #2d3248;
+  font-weight: 700;
+}
+
+.container main .bio .name .age {
+  margin-left: .7rem;
+  color: #6a6f81;
+  font-weight: 400;
+}
+
+.container main .bio .city {
+  font-size: 1.2rem;
+  margin: 1rem 0 1.5rem 0;
+  color: #6a6f81;
+  font-weight: 400;
+}
+
+.container footer {
+  border-top: 1px #ebebeb solid;
+  padding: 1.5rem 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container footer .media {
+  text-align: center;
+}
+
+.container footer .media .stats {
+  font-size: 1.5rem;
+  color: #2d3248;
+  font-weight: 700;
+}
+
+.container footer .media .info {
+  font-size: .75rem;
+  letter-spacing: 2px;
+  color: #6a6f81;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 800px) {
+  .extra .top {
+    -webkit-transform: translate(-35%, 10%);
+            transform: translate(-35%, 10%);
+  }
+  .extra .lower {
+    -webkit-transform: translate(70%, 5%);
+            transform: translate(70%, 5%);
+  }
+  .container {
+    width: 30%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

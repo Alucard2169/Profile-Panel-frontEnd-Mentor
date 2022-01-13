@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh sans', sans-serif;
+}
+
+$Primary: hsl(185, 75%, 39%);
+
+$border: hsl(0, 0%, 92%);
+
+@mixin main_font {
+    color: hsl(229, 23%, 23%);
+    font-weight: 700;
+}
+
+@mixin sub_font {
+    color: hsl(227, 10%, 46%);
+    font-weight: 400;
+}
+
+body {
+    background: $Primary;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.extra {
+    position: absolute;
+
+    .top {
+        transform: translateX(-40%);
+    }
+
+    .lower {
+        transform: translateX(40%);
+    }
+}
+
+.container {
+    box-shadow: 0 0 20px rgb(69, 67, 67);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    width: 90%;
+    background: white;
+    overflow: hidden;
+
+    header {
+        width: 100%;
+
+        .header-image {
+            width: 100%;
+        }
+    }
+
+    main {
+        text-align: center;
+
+        .profile_picture {
+            border-radius: 50%;
+            width: 65%;
+            outline: 8px white solid;
+            margin-top: -4rem;
+        }
+
+        .bio {
+            margin-top: 2rem;
+
+
+            .name {
+                @include main_font();
+
+                .age {
+                    margin-left: .7rem;
+                    @include sub_font();
+                }
+            }
+
+            .city {
+                font-size: 1.2rem;
+                margin: 1rem 0 1.5rem 0;
+                @include sub_font();
+            }
+        }
+
+
+    }
+
+    footer {
+        border-top: 1px $border solid;
+        padding: 1.5rem 2.5rem;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .media {
+            text-align: center;
+
+            .stats {
+                font-size: 1.5rem;
+                @include main_font();
+            }
+
+            .info {
+                font-size: .75rem;
+                letter-spacing: 2px;
+                @include sub_font();
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .extra {
+        .top {
+            transform: translate(-35%, 10%);
+        }
+
+        .lower {
+            transform: translate(70%, 5%);
+        }
+    }
+
+    .container {
+        width: 30%;
+    }
+}
