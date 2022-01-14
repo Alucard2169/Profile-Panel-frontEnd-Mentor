@@ -20,14 +20,14 @@ body {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  position: relative;
+  min-width: 375px;
 }
 
 body::after, body::before {
   content: "";
+  inset: 0;
   position: absolute;
   width: 100%;
-  background-size: auto;
   height: 100%;
 }
 
@@ -45,9 +45,11 @@ body::before {
           transform: translate(0%, 60%);
 }
 
-.container {
-  -webkit-box-shadow: 0 0 20px #454343;
-          box-shadow: 0 0 20px #454343;
+.card {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-shadow: 0 0 20px #298793;
+          box-shadow: 0 0 20px #298793;
   z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,48 +67,48 @@ body::before {
   overflow: hidden;
 }
 
-.container header {
+.card header {
   width: 100%;
 }
 
-.container header .header-image {
+.card header .header-image {
   width: 100%;
 }
 
-.container main {
+.card main {
   text-align: center;
 }
 
-.container main .profile_picture {
+.card main .profile_picture {
   border-radius: 50%;
   width: 65%;
   outline: 8px white solid;
   margin-top: -4rem;
 }
 
-.container main .bio {
+.card main .bio {
   margin-top: 2rem;
 }
 
-.container main .bio .name {
+.card main .bio .name {
   color: #2d3248;
   font-weight: 700;
 }
 
-.container main .bio .name .age {
+.card main .bio .name .age {
   margin-left: .7rem;
   color: #6a6f81;
   font-weight: 400;
 }
 
-.container main .bio .city {
+.card main .bio .city {
   font-size: 1.2rem;
   margin: 1rem 0 1.5rem 0;
   color: #6a6f81;
   font-weight: 400;
 }
 
-.container footer {
+.card footer {
   border-top: 1px #ebebeb solid;
   padding: 1.5rem 2.5rem;
   display: -webkit-box;
@@ -118,21 +120,27 @@ body::before {
           justify-content: space-between;
 }
 
-.container footer .media {
+.card footer .media {
   text-align: center;
 }
 
-.container footer .media .stats {
+.card footer .media .stats {
   font-size: 1.5rem;
   color: #2d3248;
   font-weight: 700;
 }
 
-.container footer .media .info {
+.card footer .media .info {
   font-size: .75rem;
   letter-spacing: 2px;
   color: #6a6f81;
   font-weight: 400;
+}
+
+@media screen and (min-width: 700px) {
+  .card {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -148,7 +156,7 @@ body::before {
     -webkit-transform: translate(20%, 50%);
             transform: translate(20%, 50%);
   }
-  .container {
+  .card {
     width: 30%;
   }
 }
