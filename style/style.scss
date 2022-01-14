@@ -28,14 +28,15 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    position: relative;
+    min-width: 375px;
+
 
     &::after,
     &::before {
         content: "";
+        inset: 0;
         position: absolute;
         width: 100%;
-        background-size: auto;
         height: 100%;
     }
 
@@ -51,11 +52,12 @@ body {
         transform: translate(0%, 60%);
     }
 
-
 }
 
-.container {
-    box-shadow: 0 0 20px rgb(69, 67, 67);
+.card {
+
+    flex-shrink: 1;
+    box-shadow: 0 0 20px #298793;
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -130,6 +132,12 @@ body {
     }
 }
 
+@media screen and (min-width: 700px) {
+    .card {
+        width: 50%;
+    }
+}
+
 @media screen and (min-width: 800px) {
 
     body {
@@ -147,7 +155,7 @@ body {
 
     }
 
-    .container {
+    .card {
         width: 30%;
     }
 }
